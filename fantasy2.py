@@ -4,8 +4,6 @@ from statistics import mean
 import requests
 from getpass import getpass
 
-#del allPlayers, ATT_form_index, MID_form_index, DEF_form_index, GK_form_index
-'''
 fpl_data = requests.get('https://fantasy.premierleague.com/api/bootstrap-static/').json()
 
 for i, player in enumerate(fpl_data['elements']):
@@ -13,7 +11,6 @@ for i, player in enumerate(fpl_data['elements']):
     fpl_data['elements'][i]['history'] = requests.get('https://fantasy.premierleague.com/api/element-summary/'
                                                              + str(player['id']) + '/').json()
 
-'''
 '''
 team_data = requests.get('https://fantasy.premierleague.com/api/my-team/1547766/', 
                          auth = ('jtemps@live.co.uk', getpass())).json()
